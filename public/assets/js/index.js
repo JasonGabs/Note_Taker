@@ -25,19 +25,6 @@ const hide = (elem) => {
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
-const app = express();
-
-
-
-const getNotesFile = app.get('/notes', (req, res) => 
-  res.sendFile('notes.html')
-)
-
-// const postNewNote = app.post('/api/notes', (req. res) => {
-//   const newNote = req.body
-
-// })
-
 const getNotes = () =>
   fetch('/api/notes', {
     method: 'GET',
